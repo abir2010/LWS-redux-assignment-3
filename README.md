@@ -1,3 +1,6 @@
+## LWS-redux-assignment-3
+### Live project link : https://assignment-3-product-cart-lws.netlify.app/
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
