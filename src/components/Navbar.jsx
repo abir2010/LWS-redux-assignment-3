@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+import { useSelector } from "react-redux";
 import logoImg from "../assets/images/logo.png";
 
 export default function Navbar({ setShow }) {
     const loadHome = () => setShow(true);
     const loadCart = () => setShow(false);
+
+    const carts = useSelector((state) => state.carts);
 
     return (
         <nav className="bg-[#171C2A] py-4">
@@ -28,7 +31,7 @@ export default function Navbar({ setShow }) {
                         onClick={loadCart}
                     >
                         <i className="text-xl fa-sharp fa-solid fa-bag-shopping" />
-                        <span id="lws-totalCart">0</span>
+                        <span id="lws-totalCart">{carts.length}</span>
                     </a>
                 </div>
             </div>
